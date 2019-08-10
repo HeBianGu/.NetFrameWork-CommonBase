@@ -23,6 +23,7 @@ namespace HeBianGu.Common.PublicTool
             {
                 Type serviceType = typeof(TClass);
                 Type resolveTo;
+
                 if (this._interfaceToClassMap.ContainsKey(serviceType))
                 {
                     resolveTo = (this._interfaceToClassMap[serviceType] ?? serviceType);
