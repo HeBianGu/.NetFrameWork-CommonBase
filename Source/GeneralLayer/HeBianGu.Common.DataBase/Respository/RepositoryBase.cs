@@ -60,7 +60,7 @@ namespace HeBianGu.Common.DataBase
         /// <returns></returns>
         public async Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
         {
-            return _dbContext.Set<TEntity>().FirstOrDefault(predicate);
+            return await _dbContext.Set<TEntity>().FirstOrDefaultAsync(predicate);
         }
 
         /// <summary>

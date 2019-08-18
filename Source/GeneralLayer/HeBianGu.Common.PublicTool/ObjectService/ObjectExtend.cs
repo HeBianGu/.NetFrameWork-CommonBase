@@ -427,7 +427,7 @@ namespace HeBianGu.Common.PublicTool
                     return (T)xmldes.Deserialize(sr);
                 }
             }
-            catch (Exception e)
+            catch
             {
                 return default(T);
             }

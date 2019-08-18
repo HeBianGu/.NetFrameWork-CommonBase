@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("HeBianGu.Common.DataBase")]
-[assembly: AssemblyDescription("有关数据库实体基类和操作存储库的封装")]
+[assembly: AssemblyTitle("HeBianGu.Common.LocalConfig")]
+[assembly: AssemblyDescription("有关存储本地简单配置文件的操作类")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HeBianGu")]
-[assembly: AssemblyProduct("HeBianGu.Common.DataBase")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("HeBianGu.Common.LocalConfig")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("ec34b9c9-0959-415a-814f-ef411aadc5b9")]
+[assembly: Guid("cb6825b5-794b-4783-8bc8-5b298b9e8e6d")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

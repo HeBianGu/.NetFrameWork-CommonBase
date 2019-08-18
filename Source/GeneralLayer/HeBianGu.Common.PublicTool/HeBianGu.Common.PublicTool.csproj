@@ -21,7 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\..\Product\Debug\HeBianGu.Common.PublicTool.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -43,10 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MvcService\ControllerService.cs" />
-    <Compile Include="MvcService\IActionResult.cs" />
-    <Compile Include="MvcService\IController.cs" />
-    <Compile Include="MvcService\ILinkActionBase.cs" />
     <Compile Include="ObjectService\BaseFactory.cs" />
     <Compile Include="ObjectService\ConvertExtention.cs" />
     <Compile Include="ObjectService\ObjectExtend.cs" />

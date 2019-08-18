@@ -8,7 +8,7 @@ namespace HeBianGu.Common.PublicTool
 {
 
     /// <summary> 依赖注入服务 - 常用 </summary>
-    public partial class ServiceRegistry
+    partial class InjectionRegistry
     { 
         /// <summary> 注入服务 </summary>
         public void Register<TClass>() where TClass : class
@@ -59,7 +59,7 @@ namespace HeBianGu.Common.PublicTool
     }
 
     /// <summary> 依赖注入服务 - 基本 </summary>
-    public partial class ServiceRegistry : IServiceProvider
+    public partial class InjectionRegistry : IServiceProvider
     {
         private readonly Dictionary<Type, ConstructorInfo> _constructorInfos = new Dictionary<Type, ConstructorInfo>();
 
@@ -75,17 +75,17 @@ namespace HeBianGu.Common.PublicTool
 
         private readonly object _syncLock = new object();
 
-        private static ServiceRegistry _instance;
+        private static InjectionRegistry _instance;
    
-        public static ServiceRegistry Instance
+        public static InjectionRegistry Instance
         {
             get
             {
-                ServiceRegistry arg_14_0;
+                InjectionRegistry arg_14_0;
 
-                if ((arg_14_0 = ServiceRegistry._instance) == null)
+                if ((arg_14_0 = InjectionRegistry._instance) == null)
                 {
-                    arg_14_0 = (ServiceRegistry._instance = new ServiceRegistry());
+                    arg_14_0 = (InjectionRegistry._instance = new InjectionRegistry());
                 }
                 return arg_14_0;
             }
@@ -423,11 +423,11 @@ namespace HeBianGu.Common.PublicTool
             {
                 if (constructorInfos.Length > 2)
                 {
-                    return ServiceRegistry.GetPreferredConstructorInfo(constructorInfos, resolveTo);
+                    return InjectionRegistry.GetPreferredConstructorInfo(constructorInfos, resolveTo);
                 }
                 if (constructorInfos.FirstOrDefault((ConstructorInfo i) => i.Name == ".cctor") == null)
                 {
-                    return ServiceRegistry.GetPreferredConstructorInfo(constructorInfos, resolveTo);
+                    return InjectionRegistry.GetPreferredConstructorInfo(constructorInfos, resolveTo);
                 }
                 ConstructorInfo first = constructorInfos.FirstOrDefault((ConstructorInfo i) => i.Name != ".cctor");
                 if (first == null || !first.IsPublic)
