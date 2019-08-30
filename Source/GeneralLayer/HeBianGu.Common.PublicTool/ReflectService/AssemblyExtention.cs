@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HeBianGu.Common.PublicTool
 {
-    public static class TypeExtention
+    public static class AssemblyExtention
     {
         public static List<Type> GetAllTypeOfMatch(this Assembly assembly, Predicate<Type> match)
         {

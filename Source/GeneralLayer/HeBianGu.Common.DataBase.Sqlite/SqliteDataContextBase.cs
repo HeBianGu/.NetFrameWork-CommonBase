@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace HeBianGu.Common.DataBase.Sqlite
 {
-    public class SqliteDataContextBase : DbContext
+    public class SqliteDataContextBase<T> : DbContext where T : DbContext
     {
 
         public SqliteDataContextBase() : base(DataBaseConfiger.GetCon, true)
@@ -21,7 +21,7 @@ namespace HeBianGu.Common.DataBase.Sqlite
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            var sqliteConnectionInitializer = new SeedingDataInitializer<SqliteDataContextBase>(modelBuilder);
+            var sqliteConnectionInitializer = new SeedingDataInitializer<T>(modelBuilder);
 
             Database.SetInitializer(sqliteConnectionInitializer);
         }
