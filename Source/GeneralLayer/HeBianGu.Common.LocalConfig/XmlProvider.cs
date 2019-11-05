@@ -21,7 +21,7 @@ namespace HeBianGu.Common.LocalConfig
                 Directory.CreateDirectory(folder);
             }
 
-            using (FileStream stream = new FileStream(filePath, FileMode.OpenOrCreate))
+            using (FileStream stream = new FileStream(filePath, FileMode.Create))
             {
                 using (StreamWriter writer = new StreamWriter(stream))
                 {

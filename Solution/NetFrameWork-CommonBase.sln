@@ -25,6 +25,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.NLogger", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.Excel", "..\Source\GeneralLayer\HeBianGu.Common.Excel\HeBianGu.Common.Excel.csproj", "{E3B60455-2847-4B66-974C-7F877EBD53B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.Socket", "..\Source\GeneralLayer\HeBianGu.Common.Socket\HeBianGu.Common.Socket.csproj", "{C5286A4B-B53F-4DC7-8E2E-B627FA91494D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp.SocketDeme.Server", "WpfApp.SocketDeme.Server\WpfApp.SocketDeme.Server.csproj", "{96EE13A6-B99D-4689-A512-6FAD9A25662C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp.SocketDemo.Client", "WpfApp.SocketDemo.Client\WpfApp.SocketDemo.Client.csproj", "{C4B528B2-CA44-402D-85E4-51B68DAA7D1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +81,18 @@ Global
 		{E3B60455-2847-4B66-974C-7F877EBD53B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3B60455-2847-4B66-974C-7F877EBD53B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3B60455-2847-4B66-974C-7F877EBD53B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5286A4B-B53F-4DC7-8E2E-B627FA91494D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5286A4B-B53F-4DC7-8E2E-B627FA91494D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5286A4B-B53F-4DC7-8E2E-B627FA91494D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5286A4B-B53F-4DC7-8E2E-B627FA91494D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96EE13A6-B99D-4689-A512-6FAD9A25662C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96EE13A6-B99D-4689-A512-6FAD9A25662C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96EE13A6-B99D-4689-A512-6FAD9A25662C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96EE13A6-B99D-4689-A512-6FAD9A25662C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B528B2-CA44-402D-85E4-51B68DAA7D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B528B2-CA44-402D-85E4-51B68DAA7D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B528B2-CA44-402D-85E4-51B68DAA7D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B528B2-CA44-402D-85E4-51B68DAA7D1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
