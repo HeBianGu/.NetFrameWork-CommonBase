@@ -9,10 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.PublicTool"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.DataBase.Sqlite", "..\Source\GeneralLayer\HeBianGu.Common.DataBase.Sqlite\HeBianGu.Common.DataBase.Sqlite.csproj", "{8862E4A3-72A6-454B-A83D-93E39EBAE16C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.LocalConfig", "..\Source\GeneralLayer\HeBianGu.Common.LocalConfig\HeBianGu.Common.LocalConfig.csproj", "{CB6825B5-794B-4783-8BC8-5B298B9E8E6D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.Logger", "..\Source\GeneralLayer\HeBianGu.Common.Logger\HeBianGu.Common.Logger.csproj", "{5B68AA8E-7138-4210-B796-376E30D4F2B3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.Http", "..\Source\GeneralLayer\HeBianGu.Common.Http\HeBianGu.Common.Http.csproj", "{0DF4671E-7CB8-4E47-86F5-BB72E3C49D2A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.Registry", "..\Source\GeneralLayer\HeBianGu.Common.Registry\HeBianGu.Common.Registry.csproj", "{B26142E8-5145-4075-888D-917CAA091B4C}"
@@ -21,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "..\Source\Applic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.TestData", "..\Source\GeneralLayer\HeBianGu.Common.TestData\HeBianGu.Common.TestData.csproj", "{3827E8F1-68C3-4AA9-99B4-E2FC5C28887C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.NLogger", "..\Source\GeneralLayer\HeBianGu.Common.NLogger\HeBianGu.Common.NLogger.csproj", "{1A47158B-F228-4BD7-AE39-78A7671CE3AC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.Excel", "..\Source\GeneralLayer\HeBianGu.Common.Excel\HeBianGu.Common.Excel.csproj", "{E3B60455-2847-4B66-974C-7F877EBD53B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.Socket", "..\Source\GeneralLayer\HeBianGu.Common.Socket\HeBianGu.Common.Socket.csproj", "{C5286A4B-B53F-4DC7-8E2E-B627FA91494D}"
@@ -30,6 +24,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp.SocketDeme.Server", "WpfApp.SocketDeme.Server\WpfApp.SocketDeme.Server.csproj", "{96EE13A6-B99D-4689-A512-6FAD9A25662C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp.SocketDemo.Client", "WpfApp.SocketDemo.Client\WpfApp.SocketDemo.Client.csproj", "{C4B528B2-CA44-402D-85E4-51B68DAA7D1B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeBianGu.Common.LocalConfig", "..\Source\GeneralLayer\HeBianGu.Common.LocalConfig\HeBianGu.Common.LocalConfig.csproj", "{F172C52B-050D-4CB3-BE84-60E2A581BF6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "整理", "整理", "{79F3CB7D-FD1D-49FD-8400-CCDD5DB00D16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeBianGu.Common.NLogger", "..\Source\GeneralLayer\HeBianGu.Common.NLogger\HeBianGu.Common.NLogger\HeBianGu.Common.NLogger.csproj", "{BF5F0FC6-20C7-4219-BD3C-AE6957923229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.Logger", "..\Source\GeneralLayer\HeBianGu.Common.Logger\HeBianGu.Common.Logger.csproj", "{5B68AA8E-7138-4210-B796-376E30D4F2B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeBianGu.Common.DataBase.Oracle", "..\Source\GeneralLayer\HeBianGu.Common.DataBase.Oracle\HeBianGu.Common.DataBase.Oracle.csproj", "{E2222CDD-C0E4-4436-BDA8-4D9A88ED59AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,14 +53,6 @@ Global
 		{8862E4A3-72A6-454B-A83D-93E39EBAE16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8862E4A3-72A6-454B-A83D-93E39EBAE16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8862E4A3-72A6-454B-A83D-93E39EBAE16C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB6825B5-794B-4783-8BC8-5B298B9E8E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB6825B5-794B-4783-8BC8-5B298B9E8E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB6825B5-794B-4783-8BC8-5B298B9E8E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB6825B5-794B-4783-8BC8-5B298B9E8E6D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B68AA8E-7138-4210-B796-376E30D4F2B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B68AA8E-7138-4210-B796-376E30D4F2B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B68AA8E-7138-4210-B796-376E30D4F2B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B68AA8E-7138-4210-B796-376E30D4F2B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0DF4671E-7CB8-4E47-86F5-BB72E3C49D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0DF4671E-7CB8-4E47-86F5-BB72E3C49D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DF4671E-7CB8-4E47-86F5-BB72E3C49D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -73,10 +69,6 @@ Global
 		{3827E8F1-68C3-4AA9-99B4-E2FC5C28887C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3827E8F1-68C3-4AA9-99B4-E2FC5C28887C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3827E8F1-68C3-4AA9-99B4-E2FC5C28887C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A47158B-F228-4BD7-AE39-78A7671CE3AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A47158B-F228-4BD7-AE39-78A7671CE3AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A47158B-F228-4BD7-AE39-78A7671CE3AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A47158B-F228-4BD7-AE39-78A7671CE3AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E3B60455-2847-4B66-974C-7F877EBD53B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E3B60455-2847-4B66-974C-7F877EBD53B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3B60455-2847-4B66-974C-7F877EBD53B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -93,9 +85,29 @@ Global
 		{C4B528B2-CA44-402D-85E4-51B68DAA7D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4B528B2-CA44-402D-85E4-51B68DAA7D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4B528B2-CA44-402D-85E4-51B68DAA7D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F172C52B-050D-4CB3-BE84-60E2A581BF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F172C52B-050D-4CB3-BE84-60E2A581BF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F172C52B-050D-4CB3-BE84-60E2A581BF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F172C52B-050D-4CB3-BE84-60E2A581BF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF5F0FC6-20C7-4219-BD3C-AE6957923229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF5F0FC6-20C7-4219-BD3C-AE6957923229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF5F0FC6-20C7-4219-BD3C-AE6957923229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF5F0FC6-20C7-4219-BD3C-AE6957923229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B68AA8E-7138-4210-B796-376E30D4F2B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B68AA8E-7138-4210-B796-376E30D4F2B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B68AA8E-7138-4210-B796-376E30D4F2B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B68AA8E-7138-4210-B796-376E30D4F2B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2222CDD-C0E4-4436-BDA8-4D9A88ED59AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2222CDD-C0E4-4436-BDA8-4D9A88ED59AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2222CDD-C0E4-4436-BDA8-4D9A88ED59AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2222CDD-C0E4-4436-BDA8-4D9A88ED59AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F172C52B-050D-4CB3-BE84-60E2A581BF6F} = {79F3CB7D-FD1D-49FD-8400-CCDD5DB00D16}
+		{BF5F0FC6-20C7-4219-BD3C-AE6957923229} = {79F3CB7D-FD1D-49FD-8400-CCDD5DB00D16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29DA4DE5-D362-4D3F-B076-61A74506B987}

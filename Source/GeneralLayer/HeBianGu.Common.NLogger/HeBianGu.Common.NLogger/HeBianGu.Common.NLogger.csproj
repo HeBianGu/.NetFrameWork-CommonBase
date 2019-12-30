@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.0;net45</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.6.8" />
+    <PackageReference Include="NLog.Config" Version="4.6.8" />
+    <PackageReference Include="NLog.Schema" Version="4.6.8" />
+  </ItemGroup>
+
+</Project>

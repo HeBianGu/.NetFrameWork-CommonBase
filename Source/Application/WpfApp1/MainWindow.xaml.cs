@@ -1,4 +1,6 @@
-﻿using HeBianGu.Common.Registry;
+﻿using HeBianGu.Common.LocalConfig;
+using HeBianGu.Common.NLogger;
+using HeBianGu.Common.Registry;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,12 +32,25 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            class1.RegisterFile("测试项目");
+            //class1.RegisterFile("测试项目");
+
+            LogService log = new LogService();
+
+            log.Debug("dgsdgsg");
+
+            log.Error("2222222222222");
+
+
+            LocalConfigService localConfigService = new LocalConfigService();
+
+            DateTime time = DateTime.Now;
+
+            localConfigService.SaveConfig(time);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            class1.UnRegister("测试项目",SystemFileType.File);
+            //class1.UnRegister("测试项目",SystemFileType.File);
         }
     }
 }

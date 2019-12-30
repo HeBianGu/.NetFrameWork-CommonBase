@@ -94,6 +94,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GeneralLayer\HeBianGu.Common.LocalConfig\HeBianGu.Common.LocalConfig.csproj">
+      <Project>{f172c52b-050d-4cb3-be84-60e2a581bf6f}</Project>
+      <Name>HeBianGu.Common.LocalConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GeneralLayer\HeBianGu.Common.NLogger\HeBianGu.Common.NLogger\HeBianGu.Common.NLogger.csproj">
+      <Project>{bf5f0fc6-20c7-4219-bd3c-ae6957923229}</Project>
+      <Name>HeBianGu.Common.NLogger</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\GeneralLayer\HeBianGu.Common.Registry\HeBianGu.Common.Registry.csproj">
       <Project>{b26142e8-5145-4075-888d-917caa091b4c}</Project>
       <Name>HeBianGu.Common.Registry</Name>

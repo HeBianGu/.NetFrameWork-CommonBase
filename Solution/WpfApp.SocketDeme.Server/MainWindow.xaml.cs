@@ -94,9 +94,9 @@ namespace WpfApp.SocketDeme.Server
                             PrintInfo("【" + item?.PID?.Name + "】数据接收成功");
                             //dataCaches.Add(new DataCache() { Data = item, Err = str });
 
-                            string callback = str.Replace("ORU^R01", "ACK^R01");
+                            //string callback = str.Replace("ORU^R01", "ACK^R01");
 
-                            sockets.SendBuffer = Encoding.UTF8.GetBytes(callback);
+                            //sockets.SendBuffer = Encoding.UTF8.GetBytes(callback);
 
                           
 
