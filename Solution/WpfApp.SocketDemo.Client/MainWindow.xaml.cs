@@ -45,7 +45,7 @@ OBX|3|NM|6|AST|26.4|umol/L|-|N|||F||26.4|||||R.Exp|Instr|M1|1102:2501";
 
                 string ip = this.txt_ip.Text;
 
-                tcpServer.InitSocket(System.Net.IPAddress.Parse(ip), 3333);
+                tcpServer.InitSocket(System.Net.IPAddress.Parse(ip), 5555);
 
                 tcpServer.Start();
 
@@ -60,7 +60,7 @@ OBX|3|NM|6|AST|26.4|umol/L|-|N|||F||26.4|||||R.Exp|Instr|M1|1102:2501";
 
         private void DataReceive(Sockets sockets)
         {
-            if (sockets.ex != null)
+            if (sockets.ex != null) 
             {
                 if (sockets.ClientDispose)
                 {

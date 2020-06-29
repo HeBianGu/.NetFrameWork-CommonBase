@@ -1,4 +1,6 @@
-﻿namespace HeBianGu.Common.DataBase
+﻿using System.ComponentModel;
+
+namespace HeBianGu.Common.DataBase
 {
     public interface IEntityBase<TPrimaryKey>
     {
@@ -14,7 +16,7 @@
         /// <summary>
         /// 主键
         /// </summary>
-        //[Hidden]
+        [ReadOnly(true)]
         public virtual TPrimaryKey ID { get; set; }
     }
 }
