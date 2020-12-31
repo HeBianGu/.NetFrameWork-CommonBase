@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeBianGu.Common.DataBase
 {
@@ -17,6 +18,7 @@ namespace HeBianGu.Common.DataBase
         /// 主键
         /// </summary>
         [ReadOnly(true)]
+        [Column("id", Order = 0)]
         public virtual TPrimaryKey ID { get; set; }
     }
 }

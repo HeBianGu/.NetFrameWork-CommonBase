@@ -15,6 +15,14 @@ namespace HeBianGu.Common.DataBase.Sqlite
         {
 
         }
+
+        public SeedingDataInitializer(DbModelBuilder builder,Action<T> seedAction) : base(builder)
+        {
+            SeedAction = seedAction;
+        }
+
+        public Action<T> SeedAction { get; set; }
+
         protected override void Seed(T context)
         {
             //for (int i = 0; i < 6; i++)
@@ -22,6 +30,8 @@ namespace HeBianGu.Common.DataBase.Sqlite
             //    var item = new mbc_dc_case { Name = "Employer" + (i + 1) };
             //    context.mbc_dc_cases.Add(item);
             //}
+
+            SeedAction?.Invoke(context);
 
             base.Seed(context);
         }

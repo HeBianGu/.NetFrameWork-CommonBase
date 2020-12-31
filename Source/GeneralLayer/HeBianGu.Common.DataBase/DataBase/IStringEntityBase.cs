@@ -13,7 +13,10 @@ namespace HeBianGu.Common.DataBase
     /// </summary>
     public abstract class GuidEntityBase : EntityBase<Guid>
     {
-
+        public GuidEntityBase()
+        {
+            this.ID = Guid.NewGuid();
+        }
     }
 
 
