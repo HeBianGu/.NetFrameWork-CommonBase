@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D188ED5-AA0D-4265-9769-1B5B4052BED4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeBianGu.General.DataBase.SysConfig</RootNamespace>
+    <AssemblyName>HeBianGu.General.DataBase.SysConfig</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\Solution\hebiangu\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContext.cs" />
+    <Compile Include="Model\hc_dd_config.cs" />
+    <Compile Include="Respository\IConfigRespository.cs" />
+    <Compile Include="Service\IConfigService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceCollectionExtention.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\HeBianGu.Common.DataBase.Sqlite\HeBianGu.Common.DataBase.Sqlite.csproj">
+      <Project>{8862e4a3-72a6-454b-a83d-93e39ebae16c}</Project>
+      <Name>HeBianGu.Common.DataBase.Sqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\HeBianGu.Common.DataBase\HeBianGu.Common.DataBase.csproj">
+      <Project>{ec34b9c9-0959-415a-814f-ef411aadc5b9}</Project>
+      <Name>HeBianGu.Common.DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeBianGu.General.DataBase.Logger\HeBianGu.General.DataBase.Logger.csproj">
+      <Project>{08C9F915-AE16-403C-8A1C-25835A2DAF92}</Project>
+      <Name>HeBianGu.General.DataBase.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Solution\Github\WPF-ControlBase-master %281%29 %281%29\WPF-ControlBase-master\WPF-ControlBase-master\Source\Base\HeBianGu.Base.WpfBase\HeBianGu.Base.WpfBase.csproj">
+      <Project>{A74196BF-ACD5-419F-B690-C88BDA11BD8B}</Project>
+      <Name>HeBianGu.Base.WpfBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
