@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -34,6 +35,29 @@ namespace HeBianGu.Common.DataBase
         }
 
         /// <summary>
+        /// 获取实体集合
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<TEntity>> GetListAsync(params string[] includes)
+        {
+            if (includes == null)
+            {
+                return await _dbContext.Set<TEntity>().ToListAsync();
+            }
+            else
+            {
+                DbQuery<TEntity> temp = _dbContext.Set<TEntity>(); 
+
+                foreach (var item in includes)
+                {
+                    temp = temp.Include(item);
+                }
+
+                return await temp.ToListAsync();
+            }
+        }
+
+        /// <summary>
         /// 根据lambda表达式条件获取实体集合
         /// </summary>
         /// <param name="predicate">lambda表达式条件</param>
@@ -46,6 +70,7 @@ namespace HeBianGu.Common.DataBase
         /// <summary>
         /// 根据主键获取实体
         /// </summary>
+        /// 
         /// <param name="id">实体主键</param>
         /// <returns></returns>
         public async Task<TEntity> GetByIDAsync(TPrimaryKey id)

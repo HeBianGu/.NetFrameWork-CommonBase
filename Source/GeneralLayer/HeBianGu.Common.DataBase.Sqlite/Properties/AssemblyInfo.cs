@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("HeBianGu.Common.DataBase.Sqlite")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("应用sqlite的数据库上下文封装")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("HeBianGu")]
 [assembly: AssemblyProduct("HeBianGu.Common.DataBase.Sqlite")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]

@@ -26,9 +26,9 @@ namespace HeBianGu.Common.DataBase.Sqlite
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //var sqliteConnectionInitializer = new SeedingDataInitializer<T>(modelBuilder);
+            var sqliteConnectionInitializer = new SeedingDataInitializer<T>(modelBuilder);
 
-            var sqliteConnectionInitializer = new SqliteDropCreateDatabaseAlways<T>(modelBuilder);
+            //var sqliteConnectionInitializer = new CreateDatabaseIfNotExists<T>(modelBuilder);
 
             //var sqliteConnectionInitializer = new SqliteDropCreateDatabaseAlways<T>(modelBuilder);
 

@@ -28,6 +28,12 @@ namespace HeBianGu.Common.DataBase
         Task<List<TEntity>> GetListAsync();
 
         /// <summary>
+        /// 获取实体集合
+        /// </summary>
+        /// <returns></returns>
+        Task<List<TEntity>> GetListAsync(params string[] includes);
+
+        /// <summary>
         /// 根据lambda表达式条件获取实体集合
         /// </summary>
         /// <param name="predicate">lambda表达式条件</param>
