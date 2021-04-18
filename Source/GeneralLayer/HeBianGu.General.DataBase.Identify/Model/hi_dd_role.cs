@@ -22,5 +22,7 @@ namespace HeBianGu.General.DataBase.Identify
         public string RoleCode { get; set; }
 
         public ICollection<hi_dd_author> Authors { get; set; }
+
+        public ICollection<hi_dd_user> Users { get; set; }
     }
 }

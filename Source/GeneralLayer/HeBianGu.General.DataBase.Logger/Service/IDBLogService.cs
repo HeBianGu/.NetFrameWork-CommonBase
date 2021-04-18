@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HeBianGu.General.DataBase.Logger
 {
-    public class LogService : ILogService
+    public class DBLogService : IDBLogService
     {
         IDebugRespository _debug;
         IErrorRespository _error;
@@ -17,7 +17,7 @@ namespace HeBianGu.General.DataBase.Logger
         IInfoRespository _info;
         IWarnRespository _warn;
 
-        public LogService(IDebugRespository debug, IErrorRespository error, IFatalRespository fatal, IInfoRespository info, IWarnRespository warn)
+        public DBLogService(IDebugRespository debug, IErrorRespository error, IFatalRespository fatal, IInfoRespository info, IWarnRespository warn)
         {
             this._debug = debug;
             this._error = error;
@@ -44,7 +44,7 @@ namespace HeBianGu.General.DataBase.Logger
 
             model.Message = message;
 
-            model.Exception = ex.ToString();
+            model.Exception = ex?.ToString();
 
             StackTrace trace = new StackTrace();
 
@@ -59,7 +59,7 @@ namespace HeBianGu.General.DataBase.Logger
 
             model.Message = message;
 
-            model.Exception = ex.ToString();
+            model.Exception = ex?.ToString();
 
             StackTrace trace = new StackTrace();
 
@@ -111,7 +111,7 @@ namespace HeBianGu.General.DataBase.Logger
         }
     }
 
-    public interface ILogService
+    public interface IDBLogService
     {
         void LogInfo(string message, string title = null);
 

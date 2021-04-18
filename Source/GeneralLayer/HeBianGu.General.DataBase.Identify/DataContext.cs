@@ -20,12 +20,15 @@ namespace HeBianGu.General.DataBase.Identify
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //  Do ：配置一对多关系模型
+            modelBuilder.Entity<hi_dd_role>().HasMany(l => l.Users).WithRequired(l => l.Role).HasForeignKey(l => l.RoleID).WillCascadeOnDelete(false);
+
             var sqliteConnectionInitializer = new SeedingDataInitializer<DataContext>(modelBuilder, l =>
              {
                  var role = new hi_dd_role { RoleName = "管理员", RoleCode = "001" };
                  this.hi_dd_roles.Add(role);
 
-                 var user = new hi_dd_user { UserName = "系统管理员", Account = "admin", Password = "123456", hi_dd_role = role };
+                 var user = new hi_dd_user { UserName = "系统管理员", Account = "admin", Password = "123456", Role = role, RoleID = role.ID };
                  this.hi_dd_users.Add(user);
              });
 

@@ -45,6 +45,19 @@ namespace HeBianGu.Common.ValidAttribute
                     {
                         results.Add(r.ErrorMessage ?? r.FormatErrorMessage(display == null ? columnName : display.Name));
                     }
+                    else
+                    {
+                        //  Do ：格式化
+                        if (r is UnitValidAttribute unit)
+                        {
+                            var p = this.GetType().GetProperty(columnName);
+
+                            string view = unit.FormatToView(value);
+
+                            if (view != value.ToString())
+                                p.SetValue(this, view);
+                        }
+                    }
                 }
 
                 return string.Join(Environment.NewLine, results);

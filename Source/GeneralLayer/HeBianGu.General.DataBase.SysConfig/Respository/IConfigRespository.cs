@@ -1,5 +1,4 @@
 ﻿using HeBianGu.Common.DataBase;
-using HeBianGu.General.DataBase.Logger;
 using System;
 using System.Collections.Generic;
 using System.Linq;

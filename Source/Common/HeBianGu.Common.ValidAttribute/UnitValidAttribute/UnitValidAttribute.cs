@@ -92,5 +92,12 @@ namespace HeBianGu.Common.ValidAttribute
            return uv.GetView(value);
 
         }
+
+        public string FormatToView(object value)
+        {
+            this.TryGetValue(value?.ToString(), out double d, out string message);
+
+            return GetView(d);
+        }
     }
 }

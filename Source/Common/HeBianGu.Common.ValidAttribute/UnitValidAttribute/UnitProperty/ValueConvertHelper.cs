@@ -133,6 +133,11 @@ namespace HeBianGu.Common.ValidAttribute
                 }
             }
 
+            if (vl.EndsWith("."))
+            {
+                message = $"{vl}值不合法,请尝试输入<{num}{unit}>格式";
+                return null;
+            }
 
             if (double.TryParse(vl, out double dd))
             {
@@ -290,8 +295,10 @@ namespace HeBianGu.Common.ValidAttribute
             sweepCycleValue = new SweepCycleValue(value, SweepCycleUnit.rpm);
             return sweepCycleValue;
         }
-        public static TimeValue StrToTimeValue(string value)
+        public static TimeValue StrToTimeValue(string value, out string message)
         {
+            message = string.Empty;
+
             var ss = _doubleRege.Split(value).Where(t =>
             {
                 var s = t.Trim();
@@ -313,7 +320,10 @@ namespace HeBianGu.Common.ValidAttribute
                 }
             }
 
+            string vl = string.IsNullOrEmpty(unit) ? string.Empty : value.Replace(unit, string.Empty);
+
             TimeUnits units = TimeUnits.s;
+
             if (unit.ToLower() == "s")
             {
                 units = TimeUnits.s;
@@ -326,36 +336,73 @@ namespace HeBianGu.Common.ValidAttribute
             {
                 units = TimeUnits.μs;
             }
+            else if (unit.ToLower() == "us")
+            {
+                units = TimeUnits.μs;
+            }
             else if (unit.ToLower() == "ns")
             {
                 units = TimeUnits.ns;
             }
-            else if (unit.ToLower().Contains("m"))
+            else if (unit.ToLower() == "h")
             {
-                units = TimeUnits.ms;
+                units = TimeUnits.h;
             }
-            else if (unit.ToLower().Contains("u"))
+            else if (unit.ToLower() == "m")
             {
-                units = TimeUnits.μs;
+                units = TimeUnits.m;
             }
-            else if (unit.ToLower().Contains("n"))
-            {
-                units = TimeUnits.ns;
-            }
-            else if (unit.ToLower().Contains("μs"))
-            {
-                units = TimeUnits.μs;
-            }
+            //else if (unit.ToLower().Contains("m"))
+            //{
+            //    units = TimeUnits.ms;
+            //}
+            //else if (unit.ToLower().Contains("u"))
+            //{
+            //    units = TimeUnits.μs;
+            //}
+            //else if (unit.ToLower().Contains("n"))
+            //{
+            //    units = TimeUnits.ns;
+            //}
+            //else if (unit.ToLower().Contains("μs"))
+            //{
+            //    units = TimeUnits.μs;
+            //}
             else
             {
-                units = TimeUnits.s;
+                if (double.TryParse(vl, out double d))
+                {
+                    message = $"{unit}不是频率的有效单位,请尝试输入<{vl}h/m/s/ms/μs/ns>格式";
+                    return null;
+                }
+                else
+                {
+                    message = $"{unit}不是频率的有效单位,请尝试输入<{num}h/m/s/ms/μs/ns>格式";
+                    return null;
+                }
             }
 
-            if (double.TryParse(num, out double dd))
+            if (vl.EndsWith("."))
+            {
+                message = $"{vl}值不合法,请尝试输入<{num}{unit}>格式";
+                return null;
+            }
+
+            if (double.TryParse(vl, out double dd))
             {
                 return GetTimeValue(Convert.ToDouble(SetTimeValue(new TimeValue(dd, units))));
+
             }
+
+            message = $"{vl}值不合法,请尝试输入<{num}{unit}>格式";
+
             return null;
+
+            //if (double.TryParse(num, out double dd))
+            //{
+            //    return GetTimeValue(Convert.ToDouble(SetTimeValue(new TimeValue(dd, units))));
+            //}
+            //return null;
         }
         public static double SetTimeValue(TimeValue timeValue)
         {
@@ -380,6 +427,14 @@ namespace HeBianGu.Common.ValidAttribute
             else if (timeValue.Units == TimeUnits.ns)
             {
                 ret = timeValue.Value * 0.001 * 0.001 * 0.001;
+            }
+            else if (timeValue.Units == TimeUnits.h)
+            {
+                ret = timeValue.Value * 60 * 60;
+            }
+            else if (timeValue.Units == TimeUnits.m)
+            {
+                ret = timeValue.Value * 60;
             }
             return ret;
         }
@@ -517,6 +572,12 @@ namespace HeBianGu.Common.ValidAttribute
             //{
             //    units = PowerUnits.w;
             //}
+
+            if (vl.EndsWith("."))
+            {
+                message = $"{vl}值不合法,请尝试输入<{num}{unit}>格式";
+                return null;
+            }
 
             if (double.TryParse(vl, out double dd))
             {
@@ -751,6 +812,11 @@ namespace HeBianGu.Common.ValidAttribute
                 }
             }
 
+            if (vl.EndsWith("."))
+            {
+                message = $"{vl}值不合法,请尝试输入<{num}{unit}>格式";
+                return null;
+            }
 
             if (double.TryParse(vl, out double dd))
             {
@@ -830,6 +896,11 @@ namespace HeBianGu.Common.ValidAttribute
                 }
             }
 
+            if (vl.EndsWith("."))
+            {
+                message = $"{vl}值不合法,请尝试输入<{num}{unit}>格式";
+                return null;
+            }
 
             if (double.TryParse(vl, out double dd))
             {

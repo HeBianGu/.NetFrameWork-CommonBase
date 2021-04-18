@@ -169,7 +169,7 @@ namespace HeBianGu.Common.ValidAttribute
             if (value is string data)
                 if (!string.IsNullOrWhiteSpace(data))
                 {
-                    var d = ValueConvertHelper.StrToTimeValue(data);
+                    var d = ValueConvertHelper.StrToTimeValue(data,out string message);
                     if (d != null)
                     {
                         var t = d.OriginalValue;

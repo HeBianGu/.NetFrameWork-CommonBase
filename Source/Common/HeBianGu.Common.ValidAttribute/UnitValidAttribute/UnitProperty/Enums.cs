@@ -55,7 +55,9 @@ namespace HeBianGu.Common.ValidAttribute
         s,
         ms,
         μs,
-        ns
+        ns,
+        h,
+        m,
     }
     public enum SweepRateUnits
     {

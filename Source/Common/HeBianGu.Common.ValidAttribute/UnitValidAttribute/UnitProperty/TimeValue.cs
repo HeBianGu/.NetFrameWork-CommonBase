@@ -8,30 +8,40 @@ namespace HeBianGu.Common.ValidAttribute
 {
     public class TimeValue
     {
-        public TimeValue(double value, TimeUnits units=TimeUnits.s)
+        public TimeValue(double value, TimeUnits units = TimeUnits.s)
         {
             _value = value;
             _units = units;
         }
         public TimeValue(double value)
         {
-            
-            if (value >= 1 || value == 0)
+
+            if (value >= 60 * 60)
+            {
+                Value = value / (60 * 60);
+                Units = TimeUnits.h;
+            }
+            else if (value >= 60)
+            {
+                Value = value / 60;
+                Units = TimeUnits.m;
+            }
+            else if (value >= 1 || value == 0)
             {
                 Value = value;
-                Units =TimeUnits.s;
+                Units = TimeUnits.s;
             }
             else if (value >= 0.001)
             {
-                Value = value*1000;
+                Value = value * 1000;
                 Units = TimeUnits.ms;
-                
+
             }
             else if (value >= 0.001 * 0.001)
             {
-                Value =value*1000*1000;
+                Value = value * 1000 * 1000;
                 Units = TimeUnits.μs;
-               
+
             }
             else if (value > 0)
             {
@@ -76,11 +86,19 @@ namespace HeBianGu.Common.ValidAttribute
                 }
                 else if (Units == TimeUnits.μs)
                 {
-                    ret = Value /( 1000 * 1000);
+                    ret = Value / (1000 * 1000);
                 }
                 else if (Units == TimeUnits.ns)
                 {
-                    ret = Value /( 1000 * 1000 * 1000);
+                    ret = Value / (1000 * 1000 * 1000);
+                }
+                else if (Units == TimeUnits.h)
+                {
+                    ret = Value * 60 * 60;
+                }
+                else if (Units == TimeUnits.m)
+                {
+                    ret = Value * 60;
                 }
                 return ret;
             }

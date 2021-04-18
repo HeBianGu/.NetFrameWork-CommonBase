@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\Solution\hebiangu\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\..\..\Solution\hebiangu\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,12 +34,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\..\Solution\hebiangu\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solution\hebiangu\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HeBianGu.Common.DataBase, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solution\hebiangu\packages\HeBianGu.Common.DataBase.1.0.1\lib\net45\HeBianGu.Common.DataBase.dll</HintPath>
+    </Reference>
+    <Reference Include="HeBianGu.Common.DataBase.Sqlite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solution\hebiangu\packages\HeBianGu.Common.DataBase.Sqlite.1.0.0\lib\net45\HeBianGu.Common.DataBase.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.CodeFirst, Version=1.6.1.31, Culture=neutral, PublicKeyToken=eb96ba0a78d831a7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solution\hebiangu\packages\SQLite.CodeFirst.1.6.1.31\lib\net45\SQLite.CodeFirst.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solution\hebiangu\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\lib\net45\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solution\hebiangu\packages\System.Data.SQLite.EF6.1.0.113.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solution\hebiangu\packages\System.Data.SQLite.Linq.1.0.113.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,25 +74,12 @@
     <Compile Include="Respository\IConfigRespository.cs" />
     <Compile Include="Service\IConfigService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceCollectionExtention.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\HeBianGu.Common.DataBase.Sqlite\HeBianGu.Common.DataBase.Sqlite.csproj">
-      <Project>{8862e4a3-72a6-454b-a83d-93e39ebae16c}</Project>
-      <Name>HeBianGu.Common.DataBase.Sqlite</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Common\HeBianGu.Common.DataBase\HeBianGu.Common.DataBase.csproj">
-      <Project>{ec34b9c9-0959-415a-814f-ef411aadc5b9}</Project>
-      <Name>HeBianGu.Common.DataBase</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HeBianGu.General.DataBase.Logger\HeBianGu.General.DataBase.Logger.csproj">
-      <Project>{08C9F915-AE16-403C-8A1C-25835A2DAF92}</Project>
-      <Name>HeBianGu.General.DataBase.Logger</Name>
-    </ProjectReference>
-    <ProjectReference Include="C:\Solution\Github\WPF-ControlBase-master %281%29 %281%29\WPF-ControlBase-master\WPF-ControlBase-master\Source\Base\HeBianGu.Base.WpfBase\HeBianGu.Base.WpfBase.csproj">
-      <Project>{A74196BF-ACD5-419F-B690-C88BDA11BD8B}</Project>
-      <Name>HeBianGu.Base.WpfBase</Name>
-    </ProjectReference>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\..\Solution\hebiangu\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\..\Solution\hebiangu\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\..\..\Solution\hebiangu\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\..\..\Solution\hebiangu\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
 </Project>
