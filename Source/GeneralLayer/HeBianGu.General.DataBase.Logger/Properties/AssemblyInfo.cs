@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("HeBianGu.LogReporter.DataBase")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("异常日志Sqlite数据库模型")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("HeBianGu")]
 [assembly: AssemblyProduct("HeBianGu.LogReporter.DataBase")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
