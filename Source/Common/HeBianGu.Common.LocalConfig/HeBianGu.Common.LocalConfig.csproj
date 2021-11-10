@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.0;net45;netstandard2.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.1</Version>
+    <Version>2.0.2</Version>
     <Authors>HeBianGu</Authors>
     <Description>通用本地配置文件辅助类</Description>
     <Copyright>Copyright 2019 HeBianGu. All rights reserved.</Copyright>

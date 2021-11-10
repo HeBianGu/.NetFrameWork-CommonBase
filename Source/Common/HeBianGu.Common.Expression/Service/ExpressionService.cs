@@ -12,6 +12,21 @@ namespace HeBianGu.Common.Expression
     {
         #region - Base -
 
+
+        /// <summary>
+        /// 根据参数动态生成Func
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="expression"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        public static LambdaExpression ParseLambda(string expression, Type resultType, params ParameterExpression[] parameters)
+        {
+            ExpressionParser parser = new ExpressionParser(parameters, expression, null);
+
+            return System.Linq.Expressions.Expression.Lambda(parser.Parse(resultType), parameters);
+        }
+
         /// <summary>
         /// 根据参数动态生成Func
         /// </summary>

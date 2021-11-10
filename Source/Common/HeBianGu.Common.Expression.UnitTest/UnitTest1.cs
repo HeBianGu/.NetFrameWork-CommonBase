@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 using System.Linq.Dynamic;
 
 namespace HeBianGu.Common.Expression.UnitTest
@@ -110,6 +111,47 @@ namespace HeBianGu.Common.Expression.UnitTest
 
             Assert.AreEqual("22", result.Invoke());
         }
-       
+
+        /// <summary>
+        /// 获取索引
+        /// </summary>
+        [TestMethod]
+        public void TestMethod16()
+        {
+            List<string> array = new List<string>();
+
+            array.Add("1111");
+            array.Add("2222");
+
+            //var result = ExpressionService.ParseDelegate<Func<List<string>,string>>("array[0]");
+
+            var result = ExpressionService.ParseFunc<List<string>, string>("array[1]", new Parameter<List<string>>("array"));
+
+            var r = result.Invoke(array);
+
+            System.Diagnostics.Debug.WriteLine(r); 
+
+            Assert.AreEqual("array", result.Invoke(array));
+        }
+
+
+        /// <summary>
+        /// 获取索引
+        /// </summary>
+        [TestMethod]
+        public void TestMethod17()
+        {
+            List<string> arr = new List<string>();
+
+            arr.Add("1111");
+            arr.Add("2222"); 
+
+            var func = ExpressionService.ParseLambda("array[0]", typeof(string), System.Linq.Expressions.Expression.Parameter(typeof(List<string>), "array"));
+
+            var r = func.Compile().DynamicInvoke(arr);
+
+            System.Diagnostics.Debug.WriteLine(r);
+        }
+
     }
 }
